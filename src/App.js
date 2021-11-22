@@ -1,10 +1,10 @@
 import "./App.css";
 import styled from "styled-components";
-import { Accordion } from "./Accordion";
-import { useAccordion } from "./hooks/useAccordion";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { ComeAgain } from "./pages/ComeAgain";
+import { useAccordion } from "./hooks/useAccordion";
 import { PracticeRef } from "./pages/PracticeRef";
+import { ComeAgain } from "./pages/ComeAgain";
+import { Accordion } from "./Accordion";
 
 const accList = [
   {
