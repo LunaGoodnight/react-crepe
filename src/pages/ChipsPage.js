@@ -20,29 +20,67 @@ const SmallChips = styled.div`
   border-radius: 50px;
 `;
 
+const optionsList = [
+  { value: "cute" },
+  { value: "apple" },
+  { value: "banana" },
+  { value: "kiwi" },
+  { value: "purple" },
+  { value: "green" },
+];
 export const ChipsPage = () => {
   const [arr, setArr] = useState([]);
   const [input, setInput] = useState("");
   const handleKeyEvent = (e) => {
+    // debugger;
     if (e.code === "Enter") {
-      console.log(e.code);
-      setArr((prev) => prev.concat(e.target.value));
-      setInput("");
+      if (e.code === "Enter" && e.target.value.trim()) {
+        console.log(e.code);
+        setArr((prev) => prev.concat(e.target.value));
+        setInput("");
+      }
+    }
+  };
+  const handleOptionsEvent = (e, value) => {
+    console.log({ value });
+    console.log({ e });
+    debugger;
+    if (e.code === "Enter") {
+      debugger;
+      // if (e.code === "Enter" && e.target.value.trim()) {
+      //   console.log(e.code);
+      //   setArr((prev) => prev.concat());
+      //   setInput("");
+      // }
     }
   };
   return (
     <Container>
       {arr.map((x) => (
-        <SmallChips>{x}</SmallChips>
+        <SmallChips key={x}>{x}</SmallChips>
       ))}
       <input
-        list="browsers"
+        list="cute"
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={(e) => handleKeyEvent(e)}
         // onKeyDown={(e) => setArr((prev) => prev.concat(e.target.value))}
       />
+      <datalist id="cute">
+        {optionsList.map((x, i) => {
+          const { value } = x;
+          return (
+            <option
+              key={i}
+              onKeyDown={(e) => handleOptionsEvent(e, value)}
+              value={value}
+            >
+              {value}
+            </option>
+          );
+        })}
+      </datalist>
     </Container>
   );
 };
