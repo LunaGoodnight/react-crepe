@@ -5,6 +5,7 @@ import { useAccordion } from "./hooks/useAccordion";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ComeAgain } from "./pages/ComeAgain";
 import { PracticeRef } from "./pages/PracticeRef";
+import { ChipsPage } from "./pages/ChipsPage";
 
 const accList = [
   {
@@ -25,7 +26,7 @@ const accList = [
   {
     title: "fruitsBasket",
     childList: [
-      { title: "cat", path: "/" },
+      { title: "Chips", path: "/chips", page: ChipsPage },
       { title: "sea", path: "/" },
       { title: "pool", path: "/" },
     ],
