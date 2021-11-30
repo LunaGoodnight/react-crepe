@@ -30,8 +30,9 @@ const SmallChips = styled.div`
   }
 `;
 const InputBox = styled.input`
-  padding: 0.2rem 0.6rem;
+  padding: 0.5rem 0.6rem;
   border: none;
+  background: #ededed;
   &:focus {
     outline: none;
   }
@@ -48,11 +49,9 @@ export const ChipsPage = () => {
   const [arr, setArr] = useState([]);
   const [input, setInput] = useState("");
   const handleKeyEvent = (e) => {
-    if (e.code === "Enter") {
-      if (e.code === "Enter" && e.target.value.trim()) {
-        setArr((prev) => prev.concat(e.target.value));
-        setInput("");
-      }
+    if (e.code === "Enter" && e.target.value.trim()) {
+      setArr((prev) => prev.concat(e.target.value.trim()));
+      setInput("");
     }
   };
   const handleRemoveChips = (i) => {
@@ -69,6 +68,7 @@ export const ChipsPage = () => {
         </SmallChips>
       ))}
       <InputBox
+        placeholder="input value here"
         list="cute"
         type="text"
         value={input}
@@ -78,6 +78,9 @@ export const ChipsPage = () => {
       <datalist id="cute">
         {chipsOptionList.map((x, i) => {
           const { value } = x;
+          if (arr.includes(value)) {
+            return null;
+          }
           return (
             <DataOptions key={i} value={value}>
               {value}

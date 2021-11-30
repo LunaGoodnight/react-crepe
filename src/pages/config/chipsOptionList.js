@@ -1,5 +1,12 @@
 export const chipsOptionList = [
+  { value: "jelly" },
+  { value: "sweet" },
+  { value: "cake" },
   { value: "cute" },
+  { value: "breve" },
+  { value: "latte" },
+  { value: "mocha" },
+  { value: "pink" },
   { value: "apple" },
   { value: "banana" },
   { value: "kiwi" },
