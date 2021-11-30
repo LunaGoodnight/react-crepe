@@ -6,16 +6,12 @@ import { PracticeRef } from "./pages/PracticeRef";
 import { ComeAgain } from "./pages/ComeAgain";
 import { Accordion } from "./Accordion";
 import { AddElement } from "./pages/AddElement";
+import { ChipsPage } from "./pages/ChipsPage";
 
 const accList = [
   {
-    title: "cuteLuna",
+    title: "Practice",
     childList: [
-      {
-        title: "Come Again",
-        path: "/ComeAgain",
-        page: ComeAgain,
-      },
       {
         title: "Practice Ref",
         path: "/practice-ref",
@@ -24,9 +20,15 @@ const accList = [
     ],
   },
   {
-    title: "fruitsBasket",
+    title: "Simple Function",
     childList: [
+      {
+        title: "Come Again",
+        path: "/ComeAgain",
+        page: ComeAgain,
+      },
       { title: "Add Element", path: "/add-element", page: AddElement },
+      { title: "Chips", path: "/chips", page: ChipsPage },
       { title: "sea", path: "/" },
       { title: "pool", path: "/" },
     ],
