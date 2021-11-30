@@ -5,6 +5,7 @@ import { useAccordion } from "./hooks/useAccordion";
 import { PracticeRef } from "./pages/PracticeRef";
 import { ComeAgain } from "./pages/ComeAgain";
 import { Accordion } from "./Accordion";
+import { AddElement } from "./pages/AddElement";
 
 const accList = [
   {
@@ -25,7 +26,7 @@ const accList = [
   {
     title: "fruitsBasket",
     childList: [
-      { title: "cat", path: "/" },
+      { title: "Add Element", path: "/add-element", page: AddElement },
       { title: "sea", path: "/" },
       { title: "pool", path: "/" },
     ],
