@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import styled from "styled-components";
+import React, { useState } from "react";
 import { chipsOptionList } from "./config/chipsOptionList";
 
 const Container = styled.div`
@@ -17,9 +17,17 @@ const Container = styled.div`
 const SmallChips = styled.div`
   background: #e3e3e3;
   color: #555555;
-  padding: 0.3rem 0.6rem;
+  padding: 0.3rem 0.8rem;
   font-size: 0.8rem;
   border-radius: 50px;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  span {
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: gray;
+  }
 `;
 const InputBox = styled.input`
   padding: 0.2rem 0.6rem;
@@ -40,7 +48,6 @@ export const ChipsPage = () => {
   const [arr, setArr] = useState([]);
   const [input, setInput] = useState("");
   const handleKeyEvent = (e) => {
-    // debugger;
     if (e.code === "Enter") {
       if (e.code === "Enter" && e.target.value.trim()) {
         setArr((prev) => prev.concat(e.target.value));
@@ -48,10 +55,18 @@ export const ChipsPage = () => {
       }
     }
   };
+  const handleRemoveChips = (i) => {
+    setArr((prev) => prev.filter((item, index) => index !== i));
+  };
   return (
     <Container>
       {arr.map((x, i) => (
-        <SmallChips key={i}>{x}</SmallChips>
+        <SmallChips key={i}>
+          <div>{x}</div>
+          <span className="material-icons" onClick={() => handleRemoveChips(i)}>
+            cancel
+          </span>
+        </SmallChips>
       ))}
       <InputBox
         list="cute"
