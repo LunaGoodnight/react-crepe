@@ -3,11 +3,12 @@ import styled from "styled-components";
 import { chipsOptionList } from "./config/chipsOptionList";
 
 const Container = styled.div`
+  flex-wrap: wrap;
   border-bottom: 1px solid aqua;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
-  background: #7347ad;
+  align-items: center;
+  background: #fff;
   color: aqua;
   padding: 1rem;
   gap: 1rem;
@@ -21,8 +22,13 @@ const SmallChips = styled.div`
   border-radius: 50px;
 `;
 const InputBox = styled.input`
+  padding: 0.2rem 0.6rem;
+  border: none;
   &:focus {
     outline: none;
+  }
+  &::-webkit-calendar-picker-indicator {
+    display: none !important;
   }
 `;
 const DataOptions = styled.option`
