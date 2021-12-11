@@ -77,13 +77,12 @@ export const ChipsPage = () => {
       />
       <datalist id="cute">
         {chipsOptionList.map((x, i) => {
-          const { value } = x;
-          if (arr.includes(value)) {
+          if (arr.includes(x)) {
             return null;
           }
           return (
-            <DataOptions key={i} value={value}>
-              {value}
+            <DataOptions key={i} value={x}>
+              {x}
             </DataOptions>
           );
         })}
