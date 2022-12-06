@@ -32,4 +32,4 @@ const RightUi = () => {
     </div>
   );
 };
-export default ComeAgain;
+export default {};

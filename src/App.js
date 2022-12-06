@@ -2,38 +2,8 @@ import "./App.css";
 import styled from "styled-components";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useAccordion } from "./hooks/useAccordion";
-import { PracticeRef } from "./pages/PracticeRef";
-import { ComeAgain } from "./pages/ComeAgain";
+import { routeList } from "./pages/config/routeList";
 import { Accordion } from "./Accordion";
-import { AddElement } from "./pages/AddElement";
-import { ChipsPage } from "./pages/ChipsPage";
-
-const accList = [
-  {
-    title: "Practice",
-    childList: [
-      {
-        title: "Practice Ref",
-        path: "/practice-ref",
-        page: PracticeRef,
-      },
-    ],
-  },
-  {
-    title: "Simple Function",
-    childList: [
-      {
-        title: "Come Again",
-        path: "/ComeAgain",
-        page: ComeAgain,
-      },
-      { title: "Add Element", path: "/add-element", page: AddElement },
-      { title: "Chips", path: "/chips", page: ChipsPage },
-      { title: "sea", path: "/" },
-      { title: "pool", path: "/" },
-    ],
-  },
-];
 
 const Menu = styled.div`
   width: 20%;
@@ -66,7 +36,7 @@ const RightPart = styled.div`
 `;
 
 function App() {
-  const accordion = useAccordion({ list: accList });
+  const accordion = useAccordion({ list: routeList });
   return (
     <Router>
       <AppWrapper>
@@ -77,7 +47,7 @@ function App() {
           </Menu>
           <RightPart>
             <Switch>
-              {accList.map(({ childList }) =>
+              {routeList.map(({ childList }) =>
                 childList.map(({ path, page, hasPage }) => {
                   const DynamicComponent = page;
                   return (
