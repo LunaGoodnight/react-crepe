@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+
 import styled from "styled-components";
 import {
   CheckAllLabel,
@@ -90,13 +90,6 @@ export const TreeSelector = ({
   );
 };
 
-TreeSelector.propTypes = {
-  selectedItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-    })
-  ).isRequired,
-  setIsDropdownOpen: PropTypes.func.isRequired,
-};
+
 
 export default {};

@@ -1,8 +1,7 @@
-import styled from 'styled-components';
-import React, { useState } from 'react';
-import { Add, Remove } from '@material-ui/icons';
-import { CheckBox, ChildMenuName, CollapseIcon } from './styleConfig';
-import { ChildMenuItem } from './ChildMenuItem';
+import styled from "styled-components";
+import React, { useState } from "react";
+import { CheckBox, ChildMenuName, CollapseIcon } from "./styleConfig";
+import { ChildMenuItem } from "./ChildMenuItem";
 
 const ChildWrapper = styled.div`
   display: flex;
@@ -14,14 +13,20 @@ const Label = styled.label`
   justify-content: flex-start;
   align-items: center;
 `;
-export const ChildMenu = ({ item, hasAllSub, hasSub, handleSelectSub, selectChildMenu }) => {
+export const ChildMenu = ({
+  item,
+  hasAllSub,
+  hasSub,
+  handleSelectSub,
+  selectChildMenu,
+}) => {
   const [isCollapse, setIsCollapse] = useState(false);
 
   return (
     <ChildWrapper>
       <ChildMenuName>
         <CollapseIcon onClick={() => setIsCollapse((prevState) => !prevState)}>
-          {isCollapse ? <Remove /> : <Add />}
+          {isCollapse ? "-" : "+"}
         </CollapseIcon>
         <Label>
           <CheckBox

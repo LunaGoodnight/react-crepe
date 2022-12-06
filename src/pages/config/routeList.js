@@ -16,7 +16,7 @@ export const routeList = [
     ],
   },
   {
-    title: "Simple Function",
+    title: "Simple Component",
     childList: [
       {
         title: "Come Again",
