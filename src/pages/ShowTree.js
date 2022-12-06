@@ -5,7 +5,7 @@ import { subsidiaryList } from "./config/subsidiaryList";
 import styled from "styled-components";
 
 const WrapMenu = styled.div`
-  width: 12rem;
+  width: 16rem;
 `;
 
 export const ShowTree = () => {
