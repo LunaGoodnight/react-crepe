@@ -2,6 +2,7 @@ import { PracticeRef } from "../PracticeRef";
 import { AddElement } from "../AddElement";
 import { ChipsPage } from "../ChipsPage";
 import { ComeAgain } from "../ComeAgain";
+import { ShowTree } from "../ShowTree";
 
 export const routeList = [
   {
@@ -24,7 +25,7 @@ export const routeList = [
       },
       { title: "Add Element", path: "/add-element", page: AddElement },
       { title: "Chips", path: "/chips", page: ChipsPage },
-      { title: "sea", path: "/" },
+      { title: "Tree Select", path: "/tree", page: ShowTree },
       { title: "pool", path: "/" },
     ],
   },
