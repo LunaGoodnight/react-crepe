@@ -3,6 +3,7 @@ import { AddElement } from "../AddElement";
 import { ChipsPage } from "../ChipsPage";
 import { ComeAgain } from "../ComeAgain";
 import { ShowTree } from "../ShowTree";
+import {ShowSelect} from "../ShowSelect";
 
 export const routeList = [
   {
@@ -26,6 +27,7 @@ export const routeList = [
       { title: "Add Element", path: "/add-element", page: AddElement },
       { title: "Chips", path: "/chips", page: ChipsPage },
       { title: "Tree Select", path: "/tree", page: ShowTree },
+      { title: "Sweet Select", path: "/select", page: ShowSelect },
       { title: "pool", path: "/" },
     ],
   },

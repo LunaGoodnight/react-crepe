@@ -48,10 +48,10 @@ function App() {
           <RightPart>
             <Switch>
               {routeList.map(({ childList }) =>
-                childList.map(({ path, page, hasPage }) => {
+                childList.map(({ path, page, hasPage }, i) => {
                   const DynamicComponent = page;
                   return (
-                    <Route path={path}>
+                    <Route path={path} key={path}>
                       {page ? <DynamicComponent /> : "Under Maintenance"}
                     </Route>
                   );
