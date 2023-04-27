@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useAccordion } from "./hooks/useAccordion";
 import { routeList } from "./pages/config/routeList";
 import { Accordion } from "./Accordion";
+import {Skeleton} from "@mui/material";
+
 
 const Menu = styled.div`
   width: 20%;
@@ -33,6 +35,7 @@ const RightPart = styled.div`
   padding: 2rem;
   width: 80%;
   height: 50vh;
+  background: #fff;
 `;
 
 function App() {
