@@ -35,7 +35,6 @@ const RightPart = styled.div`
   padding: 2rem;
   width: 80%;
   height: 50vh;
-  background: #fff;
 `;
 
 function App() {
@@ -49,6 +48,7 @@ function App() {
             <Accordion {...accordion} />
           </Menu>
           <RightPart>
+
             <Switch>
               {routeList.map(({ childList }) =>
                 childList.map(({ path, page, hasPage }, i) => {

@@ -15,6 +15,16 @@ const placeHolderShimmer = keyframes`
 
 `
 
+const PulseAnimation = keyframes`
+
+  0% {
+    background-position: 0% 0%
+  }
+  100% {
+    background-position: -135% 0%
+  }
+`
+
 const SkeletonBackground = styled.div`
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -32,12 +42,29 @@ export const SkeletonMock = styled(SkeletonBackground)`
   height: 12rem;
 `
 
+export const Pulse = styled.div`
+  //$from: #f5f5f5;
+  //$to: scale-color($from, $lightness: -10%);
+  background: #f5f5f5;
+  height: 20rem;
+  width: 20rem;
+  background: linear-gradient(-90deg, #efefef 0%, #fcfcfc 50%, #efefef 100%);
+  background-size: 400% 400%;
+  animation: ${PulseAnimation} 1.2s ease-in-out infinite;
+`
 export const WhiteBackground = styled.div`
 
   width: 100%;
-  height: 12vh;
+  height: 80vh;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
+
+
+
 export const LoadingEffect = () => {
 
-  return <WhiteBackground><SkeletonMock /></WhiteBackground>
+  return <WhiteBackground><Pulse /></WhiteBackground>
 }
