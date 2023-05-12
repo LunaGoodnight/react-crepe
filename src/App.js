@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useAccordion } from "./hooks/useAccordion";
 import { routeList } from "./pages/config/routeList";
 import { Accordion } from "./Accordion";
-import {Skeleton} from "@mui/material";
 
 
 const Menu = styled.div`
