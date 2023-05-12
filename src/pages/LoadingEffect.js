@@ -35,7 +35,7 @@ export const SkeletonMock = styled(SkeletonBackground)`
 export const WhiteBackground = styled.div`
 
   width: 100%;
-  height: 12vh;
+  height: 20vh;
 `
 export const LoadingEffect = () => {
 

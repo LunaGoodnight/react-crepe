@@ -35,7 +35,7 @@ const RightPart = styled.div`
   padding: 2rem;
   width: 80%;
   height: 50vh;
-  background: #fff;
+
 `;
 
 function App() {
