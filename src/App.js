@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useAccordion } from "./hooks/useAccordion";
 import { routeList } from "./pages/config/routeList";
 import { Accordion } from "./Accordion";
-import {Skeleton} from "@mui/material";
 
 
 const Menu = styled.div`
@@ -35,6 +34,7 @@ const RightPart = styled.div`
   padding: 2rem;
   width: 80%;
   height: 50vh;
+
 `;
 
 function App() {
@@ -48,7 +48,6 @@ function App() {
             <Accordion {...accordion} />
           </Menu>
           <RightPart>
-
             <Switch>
               {routeList.map(({ childList }) =>
                 childList.map(({ path, page, hasPage }, i) => {

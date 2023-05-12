@@ -29,7 +29,7 @@ export const routeList = [
       { title: "Chips", path: "/chips", page: ChipsPage },
       { title: "Tree Select", path: "/tree", page: ShowTree },
       { title: "Sweet Select", path: "/select", page: ShowSelect },
-      { title: "Loading Effect", path: "/loading", page: LoadingEffect },
+      { title: "Loading", path: "/loading", page: LoadingEffect },
       { title: "pool", path: "/" },
     ],
   },
