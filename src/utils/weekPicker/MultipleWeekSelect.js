@@ -21,7 +21,7 @@ export const StatusInput = styled.div`
   width: 100%;
   outline: none;
   border-bottom: 1px solid gray;
-
+  background: #fff;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -109,11 +109,16 @@ export const MultipleWeekSelect = ({
 
           {list &&
             list.map((item, index) => {
+              console.log({
+                indexNumber: index,
+                selected: selectedItems.includes(index),
+                selectedItems,
+              });
               return (
                 <Label key={index}>
                   <CheckBox
                     type="checkbox"
-                    checked={!!selectedItems.find((e) => e === index)}
+                    checked={selectedItems.includes(index)}
                     onChange={() => handleToggleItem(index)}
                   />
                   <span>{item[nameKey]}</span>
