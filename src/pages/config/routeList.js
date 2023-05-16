@@ -5,6 +5,7 @@ import { ComeAgain } from "../ComeAgain";
 import { ShowTree } from "../ShowTree";
 import {ShowSelect} from "../ShowSelect";
 import {LoadingEffect} from "../LoadingEffect";
+import {ShowWeekSelect} from "../ShowWeekSelect";
 
 export const routeList = [
   {
@@ -30,6 +31,7 @@ export const routeList = [
       { title: "Tree Select", path: "/tree", page: ShowTree },
       { title: "Sweet Select", path: "/select", page: ShowSelect },
       { title: "Loading", path: "/loading", page: LoadingEffect },
+      { title: "Week Select", path: "/weekSelect", page: ShowWeekSelect },
       { title: "pool", path: "/" },
     ],
   },
