@@ -58,10 +58,10 @@ export const DropDownList = styled.div`
   background: #fff;
   z-index: 2;
   top: 3.5rem;
-  max-height: 12rem;
+  max-height: 30rem;
   border-radius: var(--borderRadius);
   overflow-y: scroll;
-  overflow-x: hidden;
+  //overflow-x: hidden;
 
   ::-webkit-scrollbar-thumb {
     background-color: rgb(111, 111, 111);

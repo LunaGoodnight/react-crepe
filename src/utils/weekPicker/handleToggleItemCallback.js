@@ -10,7 +10,7 @@ export const handleToggleItemCallback = ({
   } else {
     if (arr.some((ele) => ele < index)) {
       const firstElement = arr[0];
-      for (let i = firstElement + 1; i < index; i++) {
+      for (let i = firstElement + 1; i <= index; i++) {
         arr = [...arr, i];
       }
       setSelectedItems(arr);
