@@ -27,7 +27,7 @@ const SkeletonBackground = styled.div`
   background-repeat: no-repeat;
 `
 
-export const SkeletonMock = styled(SkeletonBackground)`
+export const Skeleton = styled(SkeletonBackground)`
   width: 12rem;
   height: 12rem;
 `
@@ -39,5 +39,5 @@ export const WhiteBackground = styled.div`
 `
 export const LoadingEffect = () => {
 
-  return <WhiteBackground><SkeletonMock /></WhiteBackground>
+  return <WhiteBackground><Skeleton /></WhiteBackground>
 }
