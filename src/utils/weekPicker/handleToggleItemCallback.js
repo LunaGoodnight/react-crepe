@@ -14,8 +14,16 @@ export const handleToggleItemCallback = ({
   }
   // 已經有點過
   if (arr.includes(index)) {
-    const newArray = arr.filter((elementIndex) => elementIndex < index);
-    setSelectedItems(newArray);
+    // 是最上面第一個
+    if (arr[0] === index) {
+      // 把自己清掉就好
+      const newArray = arr.filter((elementIndex) => elementIndex !== index);
+      setSelectedItems(newArray);
+    } else {
+      // 不是最上面第一個，把下面清空
+      const newArray = arr.filter((elementIndex) => elementIndex < index);
+      setSelectedItems(newArray);
+    }
   } else {
     // 還沒點過，如果上面有點過的，就自動補齊
     if (arr.some((ele) => ele < index)) {
