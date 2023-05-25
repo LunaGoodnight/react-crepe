@@ -109,11 +109,6 @@ export const MultipleWeekSelect = ({
 
           {list &&
             list.map((item, index) => {
-              console.log({
-                indexNumber: index,
-                selected: selectedItems.includes(index),
-                selectedItems,
-              });
               return (
                 <Label key={index}>
                   <CheckBox
